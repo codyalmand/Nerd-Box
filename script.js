@@ -27,7 +27,7 @@ var movieGameList = {
 };
 
 
-$(".happyButton").on("click", function (e) {
+$(".feelingButton").on("click", function (e) {
     var feeling = e.target.innerHTML.toLowerCase();
     var movieTitleArr = movieGameList[feeling].movies;
     var gameTitleArr = movieGameList[feeling].games;
