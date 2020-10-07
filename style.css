@@ -1,3 +1,7 @@
+* {
+    font-family: 'Audiowide', cursive, sans-serif;
+}
+
 .content-box-one {
     box-shadow: 5px 5px 5px 5px rgb(221, 36, 221);
     padding: 10px;
@@ -7,7 +11,6 @@
     color: rgb(0, 195, 255);
     font-weight: bolder;
     font-size: 50px;
-    font-family: cursive;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.452);
 }
@@ -19,27 +22,28 @@ body {
 
 h3 {
     text-align: center;
-    font-family: serif;
+    text-decoration-color: rgb(221, 36, 221);
     font-size: 20px;
     color: rgb(0, 195, 255);
-    font-size: 40px;
-    padding: 50px;
+    font-size: 50px;
+    padding: 70px;
+    font-family: 'Audiowide', cursive, sans-serif;
 }
 
 .feelingButton {
     color: rgb(0, 195, 255);
-    background-color: rgba(0, 0, 0, 0.733);
-    font-family: serif;
-    box-shadow: 5px 5px 5px 5px rgb(221, 36, 221);
+    background-color: rgba(0, 0, 0, 0.658);
+    border-style: ridge;
+    border: 2px solid rgb(221, 36, 221);
     border-radius: 10px;
     font-size: 25px;
     padding: 15px;
     margin: 10px;
 }
 
-.grid-container {
-    margin-top: 50px;
-    
+#data-container {
+    border: 2px solid rgb(221, 36, 221);
+    border-radius: 15px;
 }
 
 .data {
@@ -47,7 +51,15 @@ h3 {
     text-align: center;
 }
 
-img {
+#vgimage {
+    width: 350px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#moviePoster {
     width: 250px;
     height: 300px;
     display: block;
