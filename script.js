@@ -17,7 +17,7 @@ var movieGameList = {
     },
     scared: {
         games: ["Alien: Isolation", "Dead Space", "Silent Hill", "Resident Evil 7: Biohazard", "Outlast", "Visage"],
-        movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead (2013)", "Hereditary"],
+        movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead", "Hereditary"],
     },
     lonely: {
         games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast"],
