@@ -5,7 +5,7 @@ var movieGameList = {
     },
     sad: {
         games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "The Legend of Zelda: Link's Awakening", "The Last of Us", "Ghost of Tsushima"],
-        movies: ["Titanic", "Les Misérables", "Eternal Sunshine for the Spotless Mind", " Her", "Armageddon", "Black Hawk Down"],
+        movies: ["Titanic", "Les Misérables", "Eternal Sunshine of the Spotless Mind", " Her", "Armageddon", "Black Hawk Down"],
     },
     energetic: {
         games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake"],
