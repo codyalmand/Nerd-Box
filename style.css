@@ -1,5 +1,8 @@
 .content-box-one {
-    padding: 80px;
+    border-style: ridge;
+    border-width: 8px;
+    border-color: rgb(221, 36, 221);
+    padding: 5px;
 }
 
 .titletext {
@@ -15,11 +18,31 @@ body {
     background: url(neon.jpg);
 }
 
-button {
+h3 {
+    padding: 30px;
+    text-align: center;
+    text-decoration-color: rgb(221, 36, 221);
+    font-family: serif;
+    font-size: 20px;
     color: rgb(0, 195, 255);
+    font-size: 50px;
+    padding: 70px;
+}
+
+.row {
+    margin-left: 30%;
+}
+
+.feelingButton {
+    color: rgb(0, 195, 255);
+    background-color: rgba(0, 0, 0, 0.658);
+    font-family: serif;
+    border-style: ridge;
     border: 2px solid rgb(221, 36, 221);
     border-radius: 10px;
-    padding: 5px;
+    font-size: 25px;
+    padding: 15px;
+    margin: 10px;
 }
 
 .grid-container {
