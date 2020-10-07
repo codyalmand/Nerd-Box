@@ -19,16 +19,11 @@ body {
 
 h3 {
     text-align: center;
-    text-decoration-color: rgb(221, 36, 221);
     font-family: serif;
     font-size: 20px;
     color: rgb(0, 195, 255);
     font-size: 40px;
     padding: 50px;
-}
-
-.row {
-    margin-left: 30%;
 }
 
 .feelingButton {
@@ -44,6 +39,22 @@ h3 {
 
 .grid-container {
     margin-top: 50px;
-    background-color: rgba(0, 0, 0, 0.671);
-    border: 10px ridge rgb(221, 36, 221);
+    
+}
+
+.data {
+    color: rgb(0, 195, 255);
+    text-align: center;
+}
+
+img {
+    width: 250px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    box-shadow: 5px 5px 5px 5px rgb(221, 36, 221);
 }

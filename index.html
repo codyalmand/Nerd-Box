@@ -22,61 +22,87 @@
 <body>
     <h3>How are you feeling?</h3>
 
-    <section class="sectionContainer">
-        <article class="row">
-            <button class="feelingButton">Happy</button>
-            <button class="feelingButton">Sad</button>
-            <button class="feelingButton">Energetic</button>
-            <button class="feelingButton">Funny</button>
-            <button class="feelingButton">Scared</button>
-            <button class="feelingButton">Lonely</button>
+    <section class="sectionContainer grid-container">
+        <article class="grid-x grid-margin-x">
+            <button class="cell small-12 medium-2 feelingButton">Happy</button>
+            <button class="cell small-12 medium-2 feelingButton">Sad</button>
+            <button class="cell small-12 medium-2 feelingButton">Energetic</button>
+            <button class="cell small-12 medium-2 feelingButton">Funny</button>
+            <button class="cell small-12 medium-2 feelingButton">Scared</button>
+            <button class="cell small-12 medium-2 feelingButton">Lonely</button>
         </article>
-    </section>      
+    </section>
 
-    <div class="grid-container fluid">
+    <div class="grid-container fluid" id="data-container">
         <div class="grid-x grid-margin-x">
             <!-- Video Game Data -->
-            <div class="cell small-6" id="video-game-box">
+            <div class="cell small-12 medium-6" id="video-game-box">
                 <!-- Title of Video Game -->
-                <h3 id="vgTitle">Test</h3>
+                <h3 class="data" id="vgTitle">Test</h3>
+
+                <hr>
 
                 <!-- Image of Game -->
-                <img src="" alt="" id="vgimage">
+                <img class="data" src="" alt="video-game-image" id="vgimage">
+
+                <hr>
 
                 <!-- Score -->
-                <div id="vgScore">Test</div>
+                <div class="data" id="vgScore">Test</div>
+
+                <hr>
 
                 <!-- Release Date -->
-                <div id="vgRelease">Test</div>
+                <div class="data" id="vgRelease">Test</div>
+
+                <hr>
 
                 <!-- Platforms Game is On -->
-                <div id="vgPlat">Test</div>
+                <div class="data" id="vgPlat">Platform </div>
+
+                <hr>
 
                 <!-- Stores to Buy Game On -->
-                <div id="vgStore">Test</div>
+                <div class="data" id="vgStore">Store </div>
+
+                <hr>
+
             </div>
             <!-- Movie Data -->
-            <div class="cell small-6" id="movie-box">
+            <div class="cell small-12 medium-6" id="movie-box">
                 <!-- Movie Title -->
-                <h3 id="movieTitle">Test</h3>
+                <h3 class="data" id="movieTitle">Test</h3>
+
+                <hr>
 
                 <!-- Poster -->
-                <img src="" alt="" id="moviePoster">
+                <img class="data" src="" alt="movie-poster" id="moviePoster">
+
+                <hr>
 
                 <!-- Movie Score -->
-                <div id="movieScore">Test</div>
+                <div class="data" id="movieScore">Test</div>
+
+                <hr>
 
                 <!-- Release Date -->
-                <div id="movieRelease">Test</div>
+                <div class="data" id="movieRelease">Test</div>
+
+                <hr>
 
                 <!-- Movie Plot -->
-                <div id="moviePlot">Test</div>
+                <div class="data" id="moviePlot">Test</div>
+
+                <hr>
 
                 <!-- Actors -->
-                <div id="actors">Test</div>
+                <div class="data" id="actors">Test</div>
+
+                <hr>
 
                 <!-- Movie Rating -->
-                <div id="movieRating">Test</div>
+                <div class="data" id="movieRating">Test</div>
+
             </div>
         </div>
     </div>
