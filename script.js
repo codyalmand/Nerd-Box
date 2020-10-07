@@ -5,7 +5,7 @@ var movieGameList = {
         movies: ["Up", "My Neighbor Totoro", "School of Rock", "Inside Out", "The Incredibles", "Toy Story"],
     },
     sad: {
-        games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "The Legend of Zelda: Link's Awakening", "The Last of Us", "Ghost of Tsushima"],
+        games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "The Last of Us", "Ghost of Tsushima"],
         movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down"],
     },
     energetic: {
@@ -45,7 +45,7 @@ $(".feelingButton").on("click", function (e) {
         $("#vgRelease").text("Release date: " + released);
         var image = response.results[0].short_screenshots[0].image;
         $("#vgimage").attr("src", image);
-        console.log(name);
+        console.log(response);
         var platforms = response.results[0].platforms;
         for (i = 0; i < platforms.length; i++) {
             //console.log(platforms[i].platform.name);
@@ -59,7 +59,7 @@ $(".feelingButton").on("click", function (e) {
         var stores = response.results[0].stores;
         
          for (i = 0; i < stores.length; i++) {
-             console.log(stores[i].store.name);
+             //console.log(stores[i].store.name);
             var store = $("<idv>").attr("id", ("vgStore" + i));
             $("#vgStore").append(store);
             $("#vgStore" + i).text(stores[i].store.name + ", ");
