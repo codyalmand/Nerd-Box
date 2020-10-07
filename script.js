@@ -1,4 +1,3 @@
-
 var movieGameList = {
     happy: {
         games: ["Stardew Valley", "Animal Crossing: New Horizons", "Fall Guys", "Mario Kart 8", "Legend of Zelda: Breath of the Wild", "Super Mario Odyssey"],
@@ -6,7 +5,7 @@ var movieGameList = {
     },
     sad: {
         games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "The Legend of Zelda: Link's Awakening", "The Last of Us", "Ghost of Tsushima"],
-        movies: ["Titanic", "Les Miserables", "Eternal Sunshine for the Spotless Mind", " Her", "Armageddon", "Black Hawk Down"],
+        movies: ["Titanic", "Les Misérables", "Eternal Sunshine for the Spotless Mind", " Her", "Armageddon", "Black Hawk Down"],
     },
     energetic: {
         games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake"],
@@ -27,7 +26,7 @@ var movieGameList = {
 };
 
 
-$(".feelingButton").on("click", function (e) {
+$(".feelingButton").on("click", function(e) {
     var feeling = e.target.innerHTML.toLowerCase();
     var movieTitleArr = movieGameList[feeling].movies;
     var gameTitleArr = movieGameList[feeling].games;
@@ -37,7 +36,7 @@ $(".feelingButton").on("click", function (e) {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         console.log(response.results[0].name);
         var name = response.results[0].name;
         var backgroundImage = response.results[0].background_image;
@@ -59,7 +58,7 @@ $(".feelingButton").on("click", function (e) {
         $.ajax({
             url: queryMovies,
             method: "GET"
-        }).then(function (response) {
+        }).then(function(response) {
             console.log(response.Title);
             var movieTitle = response.Title;
             var movieScore = response.Metascore;
@@ -72,7 +71,3 @@ $(".feelingButton").on("click", function (e) {
 
     });
 })
-
-
-
-
