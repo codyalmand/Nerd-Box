@@ -1,3 +1,4 @@
+//Objects with all movies and games
 var movieGameList = {
     happy: {
         games: ["Stardew Valley", "Animal Crossing: New Horizons", "Fall Guys", "Mario Kart 8", "Legend of Zelda: Breath of the Wild", "Super Mario Odyssey"],
@@ -25,54 +26,51 @@ var movieGameList = {
     },
 };
 
-
-$(".feelingButton").on("click", function(e) {
+//Event listener for the "How are you feeling" question
+$(".feelingButton").on("click", function (e) {
     var feeling = e.target.innerHTML.toLowerCase();
     var movieTitleArr = movieGameList[feeling].movies;
     var gameTitleArr = movieGameList[feeling].games;
+    //Variables to game ajax call
     var gameTitle = gameTitleArr[Math.floor(Math.random() * gameTitleArr.length)];
     var queryURL = "https://api.rawg.io/api/games?search=" + gameTitle;
-
+    //With this Ajax call with get all game info
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
+        //Here we set variables to get all the game data needed and then set it on index.html
         var name = response.results[0].name;
-        $("#vgTitle").text("Title: " + name);
         var backgroundImage = response.results[0].background_image;
         var released = response.results[0].released;
-        $("#vgRelease").text("Release date: " + released);
         var image = response.results[0].short_screenshots[0].image;
-        $("#vgimage").attr("src", image);
-        console.log(response);
         var platforms = response.results[0].platforms;
+        var metacritic = response.results[0].metacritic;
+        var id = response.results[0].id;
+        var stores = response.results[0].stores;
+        $("#vgTitle").text(name);
+        $("#vgRelease").text("Release date: " + released);
+        $("#vgimage").attr("src", image);
+        $("#vgScore").text("Metacritic: " + metacritic);
         for (i = 0; i < platforms.length; i++) {
-            //console.log(platforms[i].platform.name);
             var platform = $("<idv>").attr("id", ("vgPlat" + i));
             $("#vgPlat").append(platform);
             $("#vgPlat" + i).text(platforms[i].platform.name + ", ");
         }
-        var metacritic = response.results[0].metacritic;
-        $("#vgScore").text("Metacritic: " + metacritic);
-        var id = response.results[0].id;
-        var stores = response.results[0].stores;
-        
-         for (i = 0; i < stores.length; i++) {
-             //console.log(stores[i].store.name);
+        for (i = 0; i < stores.length; i++) {
             var store = $("<idv>").attr("id", ("vgStore" + i));
             $("#vgStore").append(store);
             $("#vgStore" + i).text(stores[i].store.name + ", ");
         }
-
+        //Variables for movie ajax call
         var movieTitle = movieTitleArr[Math.floor(Math.random() * movieTitleArr.length)];;
         var queryMovies = "https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy";
-
+        //Ajax call to get movie data
         $.ajax({
             url: queryMovies,
             method: "GET"
-        }).then(function(response) {
-            //console.log(movieGameList.sad.movies);
-            //console.log(response.Title);
+        }).then(function (response) {
+            //Here we set the movie data into variables and then set it on index.html
             var movieTitle = response.Title;
             var movieScore = response.Metascore;
             var movieActors = response.Actors;
@@ -80,6 +78,13 @@ $(".feelingButton").on("click", function(e) {
             var moviePoster = response.Poster;
             var movieRated = response.Rated;
             var movieReleased = response.Released;
+            $("#movieTitle").text(movieTitle);
+            $("#moviePoster").attr("src", moviePoster);
+            $("#movieRating").text("Rating: " + movieRated);
+            $("#movieScore").text("Score: " + movieScore);
+            $("#actors").text("Actors: " + movieActors + ", ");
+            $("#moviePlot").text("Plot: " + moviePlot);
+            $("#movieRelease").text("Release date: " + movieReleased);
         });
 
     });
