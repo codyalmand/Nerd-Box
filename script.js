@@ -39,6 +39,7 @@ $(".feelingButton").on("click", function (e) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
+        console.log(response);
         //Here we set variables to get all the game data needed and then set it on index.html
         var name = response.results[0].name;
         var backgroundImage = response.results[0].background_image;
@@ -76,11 +77,9 @@ $(".feelingButton").on("click", function (e) {
             var movieActors = response.Actors;
             var moviePlot = response.Plot;
             var moviePoster = response.Poster;
-            var movieRated = response.Rated;
             var movieReleased = response.Released;
             $("#movieTitle").text(movieTitle);
             $("#moviePoster").attr("src", moviePoster);
-            $("#movieRating").text("Rating: " + movieRated);
             $("#movieScore").text("Score: " + movieScore);
             $("#actors").text("Actors: " + movieActors + ", ");
             $("#moviePlot").text("Plot: " + moviePlot);
