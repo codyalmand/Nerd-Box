@@ -45,6 +45,7 @@ h3 {
 
 #data-container {
     border: 2px solid rgb(221, 36, 221);
+    border-radius: 15px;
 }
 
 .data {
