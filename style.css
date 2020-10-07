@@ -29,10 +29,6 @@ h3 {
     padding: 70px;
 }
 
-.row {
-    margin-left: 30%;
-}
-
 .feelingButton {
     color: rgb(0, 195, 255);
     background-color: rgba(0, 0, 0, 0.658);
@@ -45,7 +41,7 @@ h3 {
     margin: 10px;
 }
 
-.grid-container {
+#data-container {
     border: 2px solid rgb(221, 36, 221);
 }
 
