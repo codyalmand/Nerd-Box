@@ -25,7 +25,7 @@ h3 {
     text-decoration-color: rgb(221, 36, 221);
     font-size: 20px;
     color: rgb(0, 195, 255);
-    font-size: 50px;
+    font-size: 40px;
     padding: 70px;
     font-family: 'Audiowide', cursive, sans-serif;
 }
@@ -42,11 +42,14 @@ h3 {
 }
 
 #data-container {
+    background-color: rgba(0, 0, 0, 0.658);
     border: 2px solid rgb(221, 36, 221);
     border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px rgb(221, 36, 221);
 }
 
 .data {
+    background-color: rgba(0, 0, 0, 0.658);
     color: rgb(0, 195, 255);
     text-align: center;
 }
@@ -72,6 +75,7 @@ h3 {
 }
 
 hr {
+    background-color: rgba(0, 0, 0, 0.658);
     border: 1px solid #ff2aed;
     box-shadow: 5px 5px 5px 5px rgb(221, 36, 221);
 }
