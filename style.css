@@ -1,5 +1,11 @@
 .content-box-one {
+<<<<<<< HEAD
     padding: 80px;
+=======
+    padding: 40px;
+    image-orientation: from-image;
+    background: url(gaming-image.png);
+>>>>>>> cb11b7a0755eccd4fb3fc1877a664e3676fe2e5f
 }
 
 .titletext {
@@ -13,4 +19,11 @@
 body {
     background: black;
     background: url(neon.jpg);
+}
+
+button {
+    color: white;
+    border: 2px solid rgb(221, 36, 221);
+    border-radius: 10px;
+    padding: 5px;
 }
