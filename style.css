@@ -29,5 +29,16 @@ button {
 .data {
     color: rgb(0, 195, 255);
     text-align: center;
-    border-bottom: 2px solid rgb(221, 36, 221);
+}
+
+img {
+    width: 250px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    border: 1px solid rgb(221, 36, 221);
 }
