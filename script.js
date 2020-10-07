@@ -1,3 +1,4 @@
+
 var movieGameList = {
     happy: {
         games: ["Stardew Valley", "Animal Crossing: New Horizons", "Fall Guys", "Mario Kart 8", "Legend of Zelda: Breath of the Wild", "Super Mario Odyssey"],
@@ -5,7 +6,7 @@ var movieGameList = {
     },
     sad: {
         games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "The Legend of Zelda: Link's Awakening", "The Last of Us", "Ghost of Tsushima"],
-        movies: ["Titanic", "Les Misérables", "Eternal Sunshine of the Spotless Mind", " Her", "Armageddon", "Black Hawk Down"],
+        movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down"],
     },
     energetic: {
         games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake"],
@@ -17,7 +18,7 @@ var movieGameList = {
     },
     scared: {
         games: ["Alien: Isolation", "Dead Space", "Silent Hill", "Resident Evil 7: Biohazard", "Outlast", "Visage"],
-        movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead", "Hereditary"],
+        movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead (2013)", "Hereditary"],
     },
     lonely: {
         games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast"],
@@ -26,7 +27,7 @@ var movieGameList = {
 };
 
 
-$(".feelingButton").on("click", function(e) {
+$(".feelingButton").on("click", function (e) {
     var feeling = e.target.innerHTML.toLowerCase();
     var movieTitleArr = movieGameList[feeling].movies;
     var gameTitleArr = movieGameList[feeling].games;
@@ -36,12 +37,13 @@ $(".feelingButton").on("click", function(e) {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
-        console.log(response.results[0].name);
+    }).then(function (response) {
         var name = response.results[0].name;
         var backgroundImage = response.results[0].background_image;
         var platforms = response.results[0].platforms;
         var released = response.results[0].released;
+        var image = response.results[0].short_screenshots[0].image;
+        console.log(image);
         for (i = 0; i < platforms.length; i++) {
             //console.log(platforms[i].platform.name);
         }
@@ -51,15 +53,15 @@ $(".feelingButton").on("click", function(e) {
         for (i = 0; i < stores.length; i++) {
             //console.log(stores[i].store.name);
         }
-
         var movieTitle = movieTitleArr[Math.floor(Math.random() * movieTitleArr.length)];;
         var queryMovies = "https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy";
 
         $.ajax({
             url: queryMovies,
             method: "GET"
-        }).then(function(response) {
-            console.log(response.Title);
+        }).then(function (response) {
+            //console.log(movieGameList.sad.movies);
+            //console.log(response.Title);
             var movieTitle = response.Title;
             var movieScore = response.Metascore;
             var movieActors = response.Actors;
@@ -71,3 +73,7 @@ $(".feelingButton").on("click", function(e) {
 
     });
 })
+
+
+
+
