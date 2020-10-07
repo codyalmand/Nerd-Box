@@ -38,20 +38,32 @@ $(".feelingButton").on("click", function(e) {
         method: "GET"
     }).then(function(response) {
         var name = response.results[0].name;
+        $("#vgTitle").text("Title: " + name);
         var backgroundImage = response.results[0].background_image;
-        var platforms = response.results[0].platforms;
         var released = response.results[0].released;
+        $("#vgRelease").text("Release date: " + released);
         var image = response.results[0].short_screenshots[0].image;
-        console.log(image);
+        $("#vgimage").attr("src", image);
+        console.log(response);
+        var platforms = response.results[0].platforms;
         for (i = 0; i < platforms.length; i++) {
             //console.log(platforms[i].platform.name);
+            var platform = $("<idv>").attr("id", ("vgPlat" + i));
+            $("#vgPlat").append(platform);
+            $("#vgPlat" + i).text(platforms[i].platform.name + ", ");
         }
         var metacritic = response.results[0].metacritic;
+        $("#vgScore").text("Metacritic: " + metacritic);
         var id = response.results[0].id;
         var stores = response.results[0].stores;
-        for (i = 0; i < stores.length; i++) {
-            //console.log(stores[i].store.name);
+        
+         for (i = 0; i < stores.length; i++) {
+             //console.log(stores[i].store.name);
+            var store = $("<idv>").attr("id", ("vgStore" + i));
+            $("#vgStore").append(store);
+            $("#vgStore" + i).text(stores[i].store.name + ", ");
         }
+
         var movieTitle = movieTitleArr[Math.floor(Math.random() * movieTitleArr.length)];;
         var queryMovies = "https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy";
 
