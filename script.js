@@ -28,82 +28,77 @@ var movieGameList = {
 var id;
 
 //Event listener for the "How are you feeling" question
-<<<<<<< HEAD
-$(".feelingButton").on("click", function (e) {
-    //This tells us if the page just refreshed or not
-=======
 $(".feelingButton").on("click", function(e) {
-    console.log(e);
-    console.log(e.target.id);
->>>>>>> 81295be9ba881387d50b978eb6c4b6a6003ce9f5
-    if ($("#vgScore").text() == "Score:" && localStorage.getItem("feeling") != null) {
-        var feeling = localStorage.getItem("feeling");
-    } else {
-        var feeling = e.target.id;
-    }
-    //Here we set the "feeling" item in local storage
-    localStorage.setItem("feeling", feeling);
-    var movieTitleArr = movieGameList[feeling].movies;
-    var gameTitleArr = movieGameList[feeling].games;
-    //Variables to game ajax call
-    var gameTitle = gameTitleArr[Math.floor(Math.random() * gameTitleArr.length)];
-    var queryURL = "https://api.rawg.io/api/games?search=" + gameTitle;
-    //With this Ajax call with get all game info
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response) {
-        //Here we set variables to get all the videogame data needed and then set it on index.html
-        var name = response.results[0].name;
-        var backgroundImage = response.results[0].background_image;
-        var released = response.results[0].released;
-        var released2 = moment(released, "yyyy-dd-mm").format("MMM DD yyyy");
-        var image = response.results[0].short_screenshots[0].image;
-        var platforms = response.results[0].platforms;
-        var metacritic = response.results[0].metacritic;
-        var id = response.results[0].id;
-        var stores = response.results[0].stores;
-        $("#vgTitle").text(name);
-        $("#vgRelease").text("Release date: " + released2);
-        $("#vgimage").attr("src", image);
-        $("#vgScore").text("Metacritic: " + metacritic);
-        for (i = 0; i < platforms.length; i++) {
-            var platform = $("<idv>").attr("id", ("vgPlat" + i));
-            $("#vgPlat").append(platform);
-            $("#vgPlat" + i).text(platforms[i].platform.name + ", ");
+        console.log(e);
+        console.log(e.target.id);
+        if ($("#vgScore").text() == "Score:" && localStorage.getItem("feeling") != null) {
+            var feeling = localStorage.getItem("feeling");
+        } else {
+            var feeling = e.target.id;
         }
-        for (i = 0; i < stores.length; i++) {
-            var store = $("<idv>").attr("id", ("vgStore" + i));
-            $("#vgStore").append(store);
-            $("#vgStore" + i).text(stores[i].store.name + ", ");
-        }
-        //Variables for movie ajax call
-        var movieTitle = movieTitleArr[Math.floor(Math.random() * movieTitleArr.length)];;
-        var queryMovies = "https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy";
-        //Ajax call to get movie data
+        //Here we set the "feeling" item in local storage
+        localStorage.setItem("feeling", feeling);
+        var movieTitleArr = movieGameList[feeling].movies;
+        var gameTitleArr = movieGameList[feeling].games;
+        //Variables to game ajax call
+        var gameTitle = gameTitleArr[Math.floor(Math.random() * gameTitleArr.length)];
+        var queryURL = "https://api.rawg.io/api/games?search=" + gameTitle;
+        //With this Ajax call with get all game info
         $.ajax({
-            url: queryMovies,
+            url: queryURL,
             method: "GET"
         }).then(function(response) {
-            //Here we set the movie data into variables and then set it on index.html
-            var movieTitle = response.Title;
-            var movieScore = response.Metascore;
-            var movieActors = response.Actors;
-            var moviePlot = response.Plot;
-            var moviePoster = response.Poster;
-            var movieReleased = response.Released;
-            var movieReleased2 = moment(movieReleased, "DD MMM yyyy").format("MMM DD yyyy");
-            $("#movieTitle").text(movieTitle);
-            $("#moviePoster").attr("src", moviePoster);
-            $("#movieScore").text("Score: " + movieScore);
-            $("#actors").text("Actors: " + movieActors + ", ");
-            $("#moviePlot").text("Plot: " + moviePlot);
-            $("#movieRelease").text("Release date: " + movieReleased2);
-        });
+            //Here we set variables to get all the videogame data needed and then set it on index.html
+            var name = response.results[0].name;
+            var backgroundImage = response.results[0].background_image;
+            var released = response.results[0].released;
+            var released2 = moment(released, "yyyy-dd-mm").format("MMM DD yyyy");
+            var image = response.results[0].short_screenshots[0].image;
+            var platforms = response.results[0].platforms;
+            var metacritic = response.results[0].metacritic;
+            var id = response.results[0].id;
+            var stores = response.results[0].stores;
+            $("#vgTitle").text(name);
+            $("#vgRelease").text("Release date: " + released2);
+            $("#vgimage").attr("src", image);
+            $("#vgScore").text("Metacritic: " + metacritic);
+            for (i = 0; i < platforms.length; i++) {
+                var platform = $("<idv>").attr("id", ("vgPlat" + i));
+                $("#vgPlat").append(platform);
+                $("#vgPlat" + i).text(platforms[i].platform.name + ", ");
+            }
+            for (i = 0; i < stores.length; i++) {
+                var store = $("<idv>").attr("id", ("vgStore" + i));
+                $("#vgStore").append(store);
+                $("#vgStore" + i).text(stores[i].store.name + ", ");
+            }
+            //Variables for movie ajax call
+            var movieTitle = movieTitleArr[Math.floor(Math.random() * movieTitleArr.length)];;
+            var queryMovies = "https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy";
+            //Ajax call to get movie data
+            $.ajax({
+                url: queryMovies,
+                method: "GET"
+            }).then(function(response) {
+                //Here we set the movie data into variables and then set it on index.html
+                var movieTitle = response.Title;
+                var movieScore = response.Metascore;
+                var movieActors = response.Actors;
+                var moviePlot = response.Plot;
+                var moviePoster = response.Poster;
+                var movieReleased = response.Released;
+                var movieReleased2 = moment(movieReleased, "DD MMM yyyy").format("MMM DD yyyy");
+                $("#movieTitle").text(movieTitle);
+                $("#moviePoster").attr("src", moviePoster);
+                $("#movieScore").text("Score: " + movieScore);
+                $("#actors").text("Actors: " + movieActors + ", ");
+                $("#moviePlot").text("Plot: " + moviePlot);
+                $("#movieRelease").text("Release date: " + movieReleased2);
+            });
 
-    });
-})
-//This function gets the "feeling" item from local storage and calls the click function
+        });
+    })
+    //This function gets the "feeling" item from local storage and calls the click function
 function lastItem() {
     var e = localStorage.getItem("feeling");
     $("#" + e).click();
