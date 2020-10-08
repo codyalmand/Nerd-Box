@@ -40,17 +40,18 @@ $(".feelingButton").on("click", function (e) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        //Here we set variables to get all the game data needed and then set it on index.html
+        //Here we set variables to get all the videogame data needed and then set it on index.html
         var name = response.results[0].name;
         var backgroundImage = response.results[0].background_image;
         var released = response.results[0].released;
+        var released2 = moment(released, "yyyy-dd-mm").format("MMM DD yyyy");
         var image = response.results[0].short_screenshots[0].image;
         var platforms = response.results[0].platforms;
         var metacritic = response.results[0].metacritic;
         var id = response.results[0].id;
         var stores = response.results[0].stores;
         $("#vgTitle").text(name);
-        $("#vgRelease").text("Release date: " + released);
+        $("#vgRelease").text("Release date: " + released2);
         $("#vgimage").attr("src", image);
         $("#vgScore").text("Metacritic: " + metacritic);
         for (i = 0; i < platforms.length; i++) {
@@ -78,12 +79,13 @@ $(".feelingButton").on("click", function (e) {
             var moviePlot = response.Plot;
             var moviePoster = response.Poster;
             var movieReleased = response.Released;
+            var movieReleased2 = moment(movieReleased, "DD MMM yyyy").format("MMM DD yyyy");
             $("#movieTitle").text(movieTitle);
             $("#moviePoster").attr("src", moviePoster);
             $("#movieScore").text("Score: " + movieScore);
             $("#actors").text("Actors: " + movieActors + ", ");
             $("#moviePlot").text("Plot: " + moviePlot);
-            $("#movieRelease").text("Release date: " + movieReleased);
+            $("#movieRelease").text("Release date: " + movieReleased2);
         });
 
     });
