@@ -28,7 +28,12 @@ var movieGameList = {
 
 //Event listener for the "How are you feeling" question
 $(".feelingButton").on("click", function (e) {
+    if($("#vgScore").text() == "Score:" && localStorage.getItem("feeling") != null){
+        var feeling = localStorage.getItem("feeling");
+    }else {
     var feeling = e.target.innerHTML.toLowerCase();
+    }
+    localStorage.setItem("feeling", feeling);
     var movieTitleArr = movieGameList[feeling].movies;
     var gameTitleArr = movieGameList[feeling].games;
     //Variables to game ajax call
@@ -39,7 +44,6 @@ $(".feelingButton").on("click", function (e) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
         //Here we set variables to get all the videogame data needed and then set it on index.html
         var name = response.results[0].name;
         var backgroundImage = response.results[0].background_image;
@@ -90,3 +94,8 @@ $(".feelingButton").on("click", function (e) {
 
     });
 })
+
+function lastItem() {
+    $(".feelingButton").click();
+    console.log("refreshed");
+}
