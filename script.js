@@ -29,13 +29,13 @@ var id;
 
 //Event listener for the "How are you feeling" question
 $(".feelingButton").on("click", function (e) {
-    console.log(e);
-    console.log(e.target.id);
+    //This tells us if the page just refreshed or not
     if ($("#vgScore").text() == "Score:" && localStorage.getItem("feeling") != null) {
         var feeling = localStorage.getItem("feeling");
     } else {
         var feeling = e.target.id;
     }
+    //Here we set the "feeling" item in local storage
     localStorage.setItem("feeling", feeling);
     var movieTitleArr = movieGameList[feeling].movies;
     var gameTitleArr = movieGameList[feeling].games;
@@ -97,8 +97,8 @@ $(".feelingButton").on("click", function (e) {
 
     });
 })
-
+//This function gets the "feeling" item from local storage and calls the click function
 function lastItem() {
     var e = localStorage.getItem("feeling");
-        $("#" + e).click();
-    }
+    $("#" + e).click();
+}
