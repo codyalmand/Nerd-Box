@@ -5,8 +5,8 @@ var movieGameList = {
         movies: ["Up", "My Neighbor Totoro", "School of Rock", "Inside Out", "The Incredibles", "Toy Story", "Mrs. Doubtfire", "Forrest Gump", "The Princess Bride", "Zootopia", ""],
     },
     sad: {
-        games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "Shadow of the Colossus", "The Last of Us", "Ghost of Tsushima"],
-        movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down"],
+        games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "Shadow of the Colossus", "The Last of Us", "Ghost of Tsushima", "GRIS", "This War of Mine", "Life is Strange", "That Dragon, Cancer", "Gone Home", "Hellblade: Senua's Sacrifice"],
+        movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down", "The Pursuit of Happyness", "Marriage Story", "The Fault in Our Stars"],
     },
     action: {
         games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake", "Halo: Master Chief Collection", "Halo Reach", "Bioshock", "Bioshock 2", "Bioshock Infinite", "Mortal Kombat 11", "Red Dead Redemption 2", "Call of Duty: Modern Warfare", "Call of Duty: Warzone", "Super Smash Bros Ultimate", "Grand Theft Auto 5", "Final Fantasy 15", " Fallout 4", "God of War", "Sekiro", "Farcry 5"],
@@ -21,14 +21,19 @@ var movieGameList = {
         movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead (2013)", "Hereditary", "Train to Busan", "Overlord", "Isidious", " The Cabin in the Woods", "Green Room", "The Invitation"],
     },
     lonely: {
-        games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast"],
-        movies: ["The Notebook", "Casablanca", "The Vow", "Dirty Dancing"],
+        games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast", "Overwatch", "Minecraft", "Rocket League"],
+        movies: ["The Notebook", "Casablanca", "The Vow", "Dirty Dancing", ""],
     },
 };
 
 //Event listener for the "How are you feeling" question
 $(".feelingButton").on("click", function(e) {
-    var feeling = e.target.innerHTML.toLowerCase();
+    if ($("#vgScore").text() == "Score:" && localStorage.getItem("feeling") != null) {
+        var feeling = localStorage.getItem("feeling");
+    } else {
+        var feeling = e.target.innerHTML.toLowerCase();
+    }
+    localStorage.setItem("feeling", feeling);
     var movieTitleArr = movieGameList[feeling].movies;
     var gameTitleArr = movieGameList[feeling].games;
     //Variables to game ajax call
@@ -39,7 +44,6 @@ $(".feelingButton").on("click", function(e) {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
         //Here we set variables to get all the videogame data needed and then set it on index.html
         var name = response.results[0].name;
         var backgroundImage = response.results[0].background_image;
@@ -90,3 +94,8 @@ $(".feelingButton").on("click", function(e) {
 
     });
 })
+
+function lastItem() {
+    $(".feelingButton").click();
+    console.log("refreshed");
+}

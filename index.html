@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="lastItem()">
 
     <section class="content-box-one" id="content-box-one">
         <article class="titletext" id="titletext">Pixel-Picks<br><i class="fas fa-gamepad"></i> | <i class="fas fa-film"></i></article>
@@ -26,12 +26,12 @@
 
     <section class="sectionContainer grid-container fluid">
         <article class="grid-x grid-margin-x">
-            <button class="cell small-12 medium-4 large-2 feelingButton">Happy</button>
-            <button class="cell small-12 medium-4 large-2 feelingButton">Sad</button>
-            <button class="cell small-12 medium-4 large-2 feelingButton">Action</button>
-            <button class="cell small-12 medium-4 large-2 feelingButton">Funny</button>
-            <button class="cell small-12 medium-4 large-2 feelingButton">Scary</button>
-            <button class="cell small-12 medium-4 large-2 feelingButton">Lonely</button>
+            <button class="cell small-12 medium-4 large-2 feelingButton" id="happy">Happy</button>
+            <button class="cell small-12 medium-4 large-2 feelingButton" id="sad">Sad</button>
+            <button class="cell small-12 medium-4 large-2 feelingButton" id="action">Action</button>
+            <button class="cell small-12 medium-4 large-2 feelingButton" id="funny">Funny</button>
+            <button class="cell small-12 medium-4 large-2 feelingButton" id="scary">Scary</button>
+            <button class="cell small-12 medium-4 large-2 feelingButton" id="lonely">Lonely</button>
         </article>
     </section>
 
