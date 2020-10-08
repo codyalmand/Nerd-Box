@@ -22,16 +22,19 @@ var movieGameList = {
     },
     lonely: {
         games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast", "Overwatch", "Minecraft", "Rocket League"],
-        movies: ["The Notebook", "Casablanca", "The Vow", "Dirty Dancing", ""],
+        movies: ["The Notebook", "Casablanca", "The Vow", "Dirty Dancing", "Beauty and the Beast", "10 Things I Hate About You"],
     },
 };
+var id;
 
 //Event listener for the "How are you feeling" question
 $(".feelingButton").on("click", function(e) {
+    console.log(e);
+    console.log(e.target.id);
     if ($("#vgScore").text() == "Score:" && localStorage.getItem("feeling") != null) {
         var feeling = localStorage.getItem("feeling");
     } else {
-        var feeling = e.target.innerHTML.toLowerCase();
+        var feeling = e.target.id;
     }
     localStorage.setItem("feeling", feeling);
     var movieTitleArr = movieGameList[feeling].movies;
@@ -96,6 +99,6 @@ $(".feelingButton").on("click", function(e) {
 })
 
 function lastItem() {
-    $(".feelingButton").click();
-    console.log("refreshed");
+    var e = localStorage.getItem("feeling");
+    $("#" + e).click();
 }
