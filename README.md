@@ -4,7 +4,16 @@
 
 ## Project Conception:
 
-Our project team would like to have a online/mobile generator to suggest us a game and/or movie recommendation based on what we're in the mood for.
+Our project team would like to have an online/mobile generator to suggest us a game and movie recommendation.
+Pixel Picks helps you find a game or movie to watch based on what type you’re in the mood for.
+The motivation for this development came from our groups collective enjoyment of media, and wanting to share our picks of what we enjoy when we’re looking for something that reflects a specific mood.
+
+### User Story:
+
+<p> AS AN avid fan of media,
+<p> I WANT an application that will pick a movie and game for me to play based on what mood I’m in,
+<p> SO THAT I can enjoy media that is relevant to my current taste.
+
 
 ## Project Parameters:
 
@@ -32,6 +41,7 @@ Austin Lambert - https://github.com/AusLam212
 
 Cody Almand - https://github.com/codyalmand
 
-## Deployed Live At: https://codyalmand.github.io/Pixel-Picks/
+### Deployed Live At: https://codyalmand.github.io/Pixel-Picks/
+<br>
 
 ![](/Screenshot/Project-Screenshot.png)
