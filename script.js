@@ -28,7 +28,7 @@ var movieGameList = {
 var id;
 
 //Event listener for the "How are you feeling" question
-<<<<<<< HEAD
+
 $(".feelingButton").on("click", function (e) {
     //This tells us if the page just refreshed or not
 =======
