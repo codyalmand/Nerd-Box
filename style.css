@@ -39,6 +39,8 @@ h3 {
     font-size: 25px;
     padding: 15px;
     margin: 10px;
+    margin-bottom: 40px;
+    box-shadow: 4px 4px 4px 4px rgb(221, 36, 221);
 }
 
 #bottomSection {
