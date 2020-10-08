@@ -8,7 +8,7 @@ var movieGameList = {
         games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "Shadow of the Colossus", "The Last of Us", "Ghost of Tsushima"],
         movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down"],
     },
-    energetic: {
+    action: {
         games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake"],
         movies: ["Mad Max: Fury Road", "Baby Driver", "John Wick", "300", "Upgrade", "Dredd"],
     },
@@ -16,7 +16,7 @@ var movieGameList = {
         games: ["Portal", "Portal 2", "BattleBlock Theater", "Battletoads", "Rocket League", "Among Us"],
         movies: ["Just Friends", "Sorority Boys", "Shaun of the Dead", "Hot Fuzz", "Walk Hard", "Deadpool"],
     },
-    scared: {
+    scary: {
         games: ["Alien: Isolation", "Dead Space", "Silent Hill", "Resident Evil 7: Biohazard", "Outlast", "Visage"],
         movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead (2013)", "Hereditary"],
     },
