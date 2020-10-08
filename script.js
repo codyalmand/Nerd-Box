@@ -1,35 +1,41 @@
 //Objects with all movies and games
 var movieGameList = {
     happy: {
-        games: ["Stardew Valley", "Animal Crossing: New Horizons", "Fall Guys", "Mario Kart 8", "Legend of Zelda: Breath of the Wild", "Super Mario Odyssey"],
-        movies: ["Up", "My Neighbor Totoro", "School of Rock", "Inside Out", "The Incredibles", "Toy Story"],
+        games: ["Stardew Valley", "Animal Crossing: New Horizons", "Fall Guys", "Mario Kart 8", "Legend of Zelda: Breath of the Wild", "Super Mario Odyssey", "Slime Rancher", "Tearaway", "Rayman Legends", "PaRappa the Rapper", "Costume Quest 2", "Untitled Goose Game"],
+        movies: ["Up", "My Neighbor Totoro", "School of Rock", "Inside Out", "The Incredibles", "Toy Story", "Mrs. Doubtfire", "Forrest Gump", "The Princess Bride", "Zootopia", ""],
     },
     sad: {
-        games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "Shadow of the Colossus", "The Last of Us", "Ghost of Tsushima"],
-        movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down"],
+        games: ["What Remains of Edith Finch", "Night In The Woods", "To the Moon", "Shadow of the Colossus", "The Last of Us", "Ghost of Tsushima", "GRIS", "This War of Mine", "Life is Strange", "That Dragon, Cancer", "Gone Home", "Hellblade: Senua's Sacrifice"],
+        movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down", "The Pursuit of Happyness", "Marriage Story", "The Fault in Our Stars"],
     },
     action: {
-        games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake"],
-        movies: ["Mad Max: Fury Road", "Baby Driver", "John Wick", "300", "Upgrade", "Dredd"],
+        games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake", "Halo: Master Chief Collection", "Halo Reach", "Bioshock", "Bioshock 2", "Bioshock Infinite", "Mortal Kombat 11", "Red Dead Redemption 2", "Call of Duty: Modern Warfare", "Call of Duty: Warzone", "Super Smash Bros Ultimate", "Grand Theft Auto 5", "Final Fantasy 15", " Fallout 4", "God of War", "Sekiro", "Farcry 5"],
+        movies: ["Mad Max: Fury Road", "Baby Driver", "John Wick", "300", "Upgrade", "Dredd", "Avengers: Endgame", "Avengers: Infinity War", "Venom", "Spiderman: Homecoming", "Troy", "Clash of the Titans", "Alita: Battle Angel"],
     },
     funny: {
-        games: ["Portal", "Portal 2", "BattleBlock Theater", "Battletoads", "Rocket League", "Among Us"],
-        movies: ["Just Friends", "Sorority Boys", "Shaun of the Dead", "Hot Fuzz", "Walk Hard", "Deadpool"],
+        games: ["Portal", "Portal 2", "BattleBlock Theater", "Battletoads", "Rocket League", "Among Us", "Goat Simulator", "Untitled Goose Game", "Surgeon Simulator"],
+        movies: ["Just Friends", "Sorority Boys", "Shaun of the Dead", "Hot Fuzz", "Walk Hard", "Deadpool", "Deadpool 2", "Tucker and Dale vs Evil", "Guardians of the Galaxy"],
     },
     scary: {
-        games: ["Alien: Isolation", "Dead Space", "Silent Hill", "Resident Evil 7: Biohazard", "Outlast", "Visage"],
-        movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead (2013)", "Hereditary"],
+        games: ["Alien: Isolation", "Dead Space", "Silent Hill", "Resident Evil 7: Biohazard", "Outlast", "Visage", "Dying Light", "Soma", "Layers of Fear", " Resident Evil 2 Remake", "Outlast 2", "Slenderman: The Arrival", "The Evil Within", "THe Evil Within 2", "Deadspace 2"],
+        movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead (2013)", "Hereditary", "Train to Busan", "Overlord", "Isidious", " The Cabin in the Woods", "Green Room", "The Invitation"],
     },
     lonely: {
-        games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast"],
-        movies: ["The Notebook", "Casablanca", "The Vow", "Dirty Dancing"],
+        games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast", "Overwatch", "Minecraft", "Rocket League"],
+        movies: ["The Notebook", "Casablanca", "The Vow", "Dirty Dancing", "Beauty and the Beast", "10 Things I Hate About You"],
     },
 };
 var id;
 
 //Event listener for the "How are you feeling" question
+<<<<<<< HEAD
 $(".feelingButton").on("click", function (e) {
     //This tells us if the page just refreshed or not
+=======
+$(".feelingButton").on("click", function(e) {
+    console.log(e);
+    console.log(e.target.id);
+>>>>>>> 81295be9ba881387d50b978eb6c4b6a6003ce9f5
     if ($("#vgScore").text() == "Score:" && localStorage.getItem("feeling") != null) {
         var feeling = localStorage.getItem("feeling");
     } else {
@@ -46,7 +52,7 @@ $(".feelingButton").on("click", function (e) {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         //Here we set variables to get all the videogame data needed and then set it on index.html
         var name = response.results[0].name;
         var backgroundImage = response.results[0].background_image;
@@ -78,7 +84,7 @@ $(".feelingButton").on("click", function (e) {
         $.ajax({
             url: queryMovies,
             method: "GET"
-        }).then(function (response) {
+        }).then(function(response) {
             //Here we set the movie data into variables and then set it on index.html
             var movieTitle = response.Title;
             var movieScore = response.Metascore;
