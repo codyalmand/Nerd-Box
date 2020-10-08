@@ -85,7 +85,7 @@ $(".feelingButton").on("click", function (e) {
             $("#movieScore").text("Score: " + movieScore);
             $("#actors").text("Actors: " + movieActors + ", ");
             $("#moviePlot").text("Plot: " + moviePlot);
-            $("#movieRelease").text("Release date: " + movieReleased);
+            $("#movieRelease").text("Release date: " + movieReleased2);
         });
 
     });
