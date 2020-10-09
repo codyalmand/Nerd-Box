@@ -10,7 +10,7 @@ var movieGameList = {
     },
     action: {
         games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake", "Halo: Master Chief Collection", "Halo Reach", "Bioshock", "Bioshock 2", "Bioshock Infinite", "Mortal Kombat 11", "Red Dead Redemption 2", "Call of Duty: Modern Warfare", "Call of Duty: Warzone", "Super Smash Bros Ultimate", "Grand Theft Auto 5", "Final Fantasy 15", " Fallout 4", "God of War", "Sekiro", "Farcry 5"],
-        movies: ["Mad Max: Fury Road", "Baby Driver", "John Wick", "300", "Upgrade", "Dredd", "Avengers: Endgame", "Avengers: Infinity War", "Venom", "Spiderman: Homecoming", "Troy", "Clash of the Titans", "Alita: Battle Angel"],
+        movies: ["Mad Max: Fury Road", "Baby Driver", "John Wick", "300", "Upgrade", "Dredd", "Avengers: Endgame", "Avengers: Infinity War", "Venom", "Spider-Man: Homecoming", "Troy", "Clash of the Titans", "Alita: Battle Angel"],
     },
     funny: {
         games: ["Portal", "Portal 2", "BattleBlock Theater", "Battletoads", "Rocket League", "Among Us", "Goat Simulator", "Untitled Goose Game", "Surgeon Simulator"],
