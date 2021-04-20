@@ -2,6 +2,14 @@
 
 <br>
 
+### Deployed Live At: https://codyalmand.github.io/Pixel-Picks/
+
+<br>
+
+![](/Screenshot/Project-Screenshot.png)
+
+<br>
+
 ## Project Conception:
 
 Our project team would like to have an online/mobile generator to suggest us a game and movie recommendation.
@@ -41,7 +49,4 @@ Austin Lambert - https://github.com/AusLam212
 
 Cody Almand - https://github.com/codyalmand
 
-### Deployed Live At: https://codyalmand.github.io/Pixel-Picks/
 <br>
-
-![](/Screenshot/Project-Screenshot.png)
