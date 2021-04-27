@@ -43,7 +43,8 @@ h3 {
     box-shadow: 4px 4px 4px 4px rgb(221, 36, 221);
 }
 .feelingButton:hover {
-    background-color:rgb(221, 36, 221);
+    border-color :rgb(0, 195, 255);
+    background-color: rgba(221, 36, 221, 0.719);
 }
 
 #bottomSection {
