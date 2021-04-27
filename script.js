@@ -1,7 +1,7 @@
 //Objects with all movies and games
 var movieGameList = {
     happy: {
-        games: ["Stardew Valley", "Animal Crossing: New Horizons", "Fall Guys", "Mario Kart 8", "Legend of Zelda: Breath of the Wild", "Super Mario Odyssey", "Slime Rancher", "Tearaway", "Rayman Legends", "PaRappa the Rapper", "Costume Quest 2", "Untitled Goose Game"],
+        games: ["Persona 5: Royal", "Stardew Valley", "Animal Crossing: New Horizons", "Fall Guys", "Mario Kart 8", "Legend of Zelda: Breath of the Wild", "Super Mario Odyssey", "Slime Rancher", "Tearaway", "Rayman Legends", "PaRappa the Rapper", "Costume Quest 2", "Untitled Goose Game"],
         movies: ["Up", "My Neighbor Totoro", "School of Rock", "Inside Out", "The Incredibles", "Toy Story", "Mrs. Doubtfire", "Forrest Gump", "The Princess Bride", "Zootopia", ""],
     },
     sad: {
@@ -9,19 +9,19 @@ var movieGameList = {
         movies: ["Titanic", "Les Miserables", "Eternal Sunshine of the Spotless Mind", "Her", "Armageddon", "Black Hawk Down", "The Pursuit of Happyness", "Marriage Story", "The Fault in Our Stars"],
     },
     action: {
-        games: ["Marvel's Spider-Man", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake", "Halo: Master Chief Collection", "Halo Reach", "Bioshock", "Bioshock 2", "Bioshock Infinite", "Mortal Kombat 11", "Red Dead Redemption 2", "Call of Duty: Modern Warfare", "Call of Duty: Warzone", "Super Smash Bros Ultimate", "Grand Theft Auto 5", "Final Fantasy 15", " Fallout 4", "God of War", "Sekiro", "Farcry 5"],
-        movies: ["Mad Max: Fury Road", "Baby Driver", "John Wick", "300", "Upgrade", "Dredd", "Avengers: Endgame", "Avengers: Infinity War", "Venom", "Spider-Man: Homecoming", "Troy", "Clash of the Titans", "Alita: Battle Angel"],
+        games: ["Dark Souls: Remastered", "Dark Souls 3", "Demon Souls", "Days Gone", "God Of War (2018)", "Jedi: Fallen Order", "Marvel's Spider-Man", "Mass Effect 2", "Control", "Superhot", "DOOM Eternal", "Gears of War", "Bloodborne", "Final Fantasy VII: Remake", "Final Fantasy XV", "Halo: Master Chief Collection", "Halo Reach", "Bioshock", "Bioshock 2", "Bioshock Infinite", "Mortal Kombat 11", "Red Dead Redemption 2", "Call of Duty: Modern Warfare", "Call of Duty: Warzone", "Super Smash Bros Ultimate", "Grand Theft Auto 5", "Final Fantasy 15", " Fallout 4", "God of War", "Sekiro: Shadows Die Twice", "Farcry 5"],
+        movies: ["Mad Max: Fury Road", "Baby Driver", "John Wick", "300", "Upgrade", "Dredd", "Avengers: Endgame", "Avengers: Infinity War", "Venom", "Spider-Man: Homecoming", "Troy", "Clash of the Titans", "Alita: Battle Angel", "Cyberpunk"],
     },
     funny: {
-        games: ["Portal", "Portal 2", "BattleBlock Theater", "Battletoads", "Rocket League", "Among Us", "Goat Simulator", "Untitled Goose Game", "Surgeon Simulator"],
+        games: ["Portal", "Portal 2", "Hitman", "BattleBlock Theater", "Battletoads", "Rocket League", "Among Us", "Goat Simulator", "Untitled Goose Game", "Surgeon Simulator"],
         movies: ["Just Friends", "Sorority Boys", "Shaun of the Dead", "Hot Fuzz", "Walk Hard", "Deadpool", "Deadpool 2", "Tucker and Dale vs Evil", "Guardians of the Galaxy"],
     },
     scary: {
-        games: ["Alien: Isolation", "Dead Space", "Silent Hill", "Resident Evil 7: Biohazard", "Outlast", "Visage", "Dying Light", "Soma", "Layers of Fear", " Resident Evil 2 Remake", "Outlast 2", "Slenderman: The Arrival", "The Evil Within", "THe Evil Within 2", "Deadspace 2"],
+        games: ["The Last Of Us", "The Last Of Us: Part 2", "Alien: Isolation", "Dead Space", "Silent Hill", "Resident Evil 4", "Resident Evil 7: Biohazard", "Resident Evil 8: Village", "Outlast", "Visage", "Dying Light", "Soma", "Layers of Fear", "Resident Evil 2 Remake", "Resident Evil 3 Remake", "Outlast 2", "Slenderman: The Arrival", "The Evil Within", "THe Evil Within 2", "Deadspace 2"],
         movies: ["Midsommar", "Mother", "It", "The Conjuring", "Evil Dead (2013)", "Hereditary", "Train to Busan", "Overlord", "Isidious", " The Cabin in the Woods", "Green Room", "The Invitation"],
     },
     lonely: {
-        games: ["Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast", "Overwatch", "Minecraft", "Rocket League"],
+        games: ["It Takes Two", "A Way Out", "Lovers in a Dangerous Spacetime", "Overcooked! 2", "Apex Legends", "Gang Beast", "Overwatch", "Minecraft", "Rocket League", "Call of Duty: Warzone"],
         movies: ["The Notebook", "Casablanca", "The Vow", "Dirty Dancing", "Beauty and the Beast", "10 Things I Hate About You"],
     },
 };
