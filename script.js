@@ -41,7 +41,7 @@ $(".feelingButton").on("click", function(e) {
         localStorage.setItem("feeling", feeling);
         var movieTitleArr = movieGameList[feeling].movies;
         var gameTitleArr = movieGameList[feeling].games;
-        //Variables to game ajax call GET 
+        //Variables to game ajax call
         var gameTitle = gameTitleArr[Math.floor(Math.random() * gameTitleArr.length)];
         var queryURL = "https://api.rawg.io/api/games?key=3312ae1fbcd747fab9adf53fee1d8057&search=" + gameTitle;
         //With this Ajax call with get all game info
