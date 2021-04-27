@@ -43,7 +43,7 @@ $(".feelingButton").on("click", function(e) {
         var gameTitleArr = movieGameList[feeling].games;
         //Variables to game ajax call
         var gameTitle = gameTitleArr[Math.floor(Math.random() * gameTitleArr.length)];
-        var queryURL = "https://api.rawg.io/api/games?search=" + gameTitle;
+        var queryURL = "https://api.rawg.io/api/games?key=3312ae1fbcd747fab9adf53fee1d8057&search=" + gameTitle;
         //With this Ajax call with get all game info
         $.ajax({
             url: queryURL,
